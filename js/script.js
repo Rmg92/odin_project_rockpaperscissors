@@ -25,33 +25,71 @@ function playerPlay() {
 function playRound(playerSelection, computerSelection) {
     console.log("Player choice: " + playerSelection);
     console.log("Computer choice: " + computerSelection);
+    let winner = "";
     if (playerSelection === "rock") {
         if (computerSelection === "rock") {
-            return "Tie! Play Again!";
+            console.log("Tie! Play Again!");
+            winner = "tie";
         } else if (computerSelection === "paper") {
-            return "You Lose! " + computerSelection + " beats " + playerSelection;
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+            winner = "computer";
         } else {
-            return "You Win! " + playerSelection + " beats " + computerSelection;
+            console.log("You Win! " + playerSelection + " beats " + computerSelection);
+            winner = "user";
         }
     } else if (playerSelection === "paper") {
         if (computerSelection === "paper") {
-            return "Tie! Play Again!";
+            console.log("Tie! Play Again!");
+            winner = "tie";
         } else if (computerSelection === "scissor") {
-            return "You Lose! " + computerSelection + " beats " + playerSelection;
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+            winner = "computer";
         } else {
-            return "You Win! " + playerSelection + " beats " + computerSelection;
+            console.log("You Win! " + playerSelection + " beats " + computerSelection);
+            winner = "computer";
         }
     } else if (playerSelection === "scissor") {
         if (computerSelection === "scissor") {
-            return "Tie! Play Again!";
+            console.log("Tie! Play Again!");
+            return "tie";
         } else if (computerSelection === "rock") {
-            return "You Lose! " + computerSelection + " beats " + playerSelection;
+            console.log("You Lose! " + computerSelection + " beats " + playerSelection);
+            winner = "computer";
         } else {
-            return "You Win! " + playerSelection + " beats " + computerSelection;
+            console.log("You Win! " + playerSelection + " beats " + computerSelection);
+            winner = "computer";
         }
     } else {
-        return("Wrong Choice! Choose only between Rock, Paper or Scissor");
+        console.log("Wrong Choice! Choose only between Rock, Paper or Scissor");
+        winner = "wrong";
     }
+    return winner;
 }
 
-/* Game is played, it gets both computer and user choices and compares them to determine the winner, first to have 5 wins, wins the game */
+/* Game is played, it plays a round of the game, increments the score of the winner and at the end of 5 rounds the player with highest score wins the game.
+ If tie or wrong choice by user -> repeat round */
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let gameWinner = "";
+    for (let i = 1; i < 6; i++) {
+        let round = "Round number: " + i;
+        console.log(round)
+        let winner = playRound(playerPlay(), computerPlay());
+        if (winner === "computer") {
+            computerScore++;
+            console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+        } else if (winner === "user") {
+            playerScore++;
+            console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
+        } else {
+            i--;
+        }
+    }
+    if (playerScore > computerScore) {
+        gameWinner = "User wins the game!"
+    } else {
+        gameWinner = "Computer wins the game!"
+    }
+    return gameWinner;
+}
