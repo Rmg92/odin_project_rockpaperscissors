@@ -1,3 +1,23 @@
 html {
     background-color: black;
 }
+
+.scoreBoard {
+    color: white;
+}
+
+.roundResult {
+    color: white;
+}
+
+#playerSelection {
+    color: white;
+}
+
+#computerSelection {
+    color: white;
+}
+
+#roundResult {
+    color: white;
+}
