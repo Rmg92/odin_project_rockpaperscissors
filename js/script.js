@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
             winner = "computer";
         } else {
             console.log("You Win! " + playerSelection + " beats " + computerSelection);
-            winner = "computer";
+            winner = "user";
         }
     } else if (playerSelection === "scissor") {
         if (computerSelection === "scissor") {
@@ -57,7 +57,7 @@ function playRound(playerSelection, computerSelection) {
             winner = "computer";
         } else {
             console.log("You Win! " + playerSelection + " beats " + computerSelection);
-            winner = "computer";
+            winner = "user";
         }
     } else {
         console.log("Wrong Choice! Choose only between Rock, Paper or Scissor");
