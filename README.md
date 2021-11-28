@@ -4,10 +4,4 @@ I will create a Rock Paper Scissors game to be played on the browser using html,
 
 To play the game on the console go to: https://rmg92.github.io/odin_project_rockpaperscissors/
 
-1- Right-click on the page
-
-2- Click Inspect
-
-3- Go to console
-
-4- Write 'game()' on the console and click enter
+Play a game of Rock, Paper, Scissors game against the computer, First one to reach 5 wins, wins the game.

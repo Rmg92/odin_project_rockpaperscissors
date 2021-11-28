@@ -3,57 +3,72 @@ let computerScore = 0;
 
 const playerChoice = document.querySelector('#playerSelection');
 const computerChoice = document.querySelector('#computerSelection');
-const score = document.querySelector('#score');
+const computerScoreDisplay = document.querySelector('#computerScoreDisplay');
+const playerScoreDisplay = document.querySelector('#playerScoreDisplay');
 const roundResult = document.querySelector('#roundResult');
+const playButtons = document.querySelector('.playButtons');
 
+/* If New game button is clicked, function new game is run, if rock, paper or scissor buttons are clicked, playRound function is run */
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        playRound(button.className, computerPlay());
+        if (button.className == 'newGame') {
+            newGame();
+        } else {
+            playRound(button.className, computerPlay());
+        }
     })
 })
 
 /* Computer makes a random choice between Rock, Paper and Scissor */
 function computerPlay() {
     /* a random number between 1 and 100 is chosen*/
-    let computerSelection = Math.round((Math.random() * 100) + 1);
+    let computerSelection = Math.random();
 
-    if (computerSelection < 34) {
-        /* if number is lower than 34, computer choses Rock*/
+    if (computerSelection < 1 / 3) {
+        /* if number is lower than 0.333.., computer choses Rock*/
         return "rock";
-    } else if (computerSelection > 66) {
-        /* if number is higher than 66, computer choses Paper*/
+    } else if (computerSelection > 2 / 3) {
+        /* if number is higher than 0.666.., computer choses Paper*/
         return "paper"
     } else {
-        /* if number is between 33 and 66, computer choses Scissor*/
+        /* if number is between 0.333.. and 0.666.., computer choses Scissor*/
         return "scissor"
     }
 }
 
+/* function is run when player beats computer, updates the round result and scores */
 function playerWin(playerSelection, computerSelection) {
     roundResult.textContent = "You Win! " + playerSelection + " beats " + computerSelection;
     playerScore++;
-    score.textContent = "Player Score: " + playerScore + " Computer Score: " + computerScore;
+    playerScoreDisplay.textContent = playerScore;
     game();
 }
 
+/* function is run when computer beats player, updates the round result and scores */
 function computerWin(playerSelection, computerSelection) {
     roundResult.textContent = "You Lose! " + computerSelection + " beats " + playerSelection;
     computerScore++;
-    score.textContent = "Player Score: " + playerScore + " Computer Score: " + computerScore;
+    computerScoreDisplay.textContent = computerScore;
     game();
 }
 
+/* Resets all the scores and selections and starts a new game */
 function newGame() {
     computerScore = 0;
     playerScore = 0;
-    score.textContent = "Player Score: " + playerScore + " Computer Score: " + computerScore;
+    computerScoreDisplay.textContent = computerScore;
+    playerScoreDisplay.textContent = playerScore;
+    computerChoice.textContent = '';
+    playerChoice.textContent = '';
+    roundResult.textContent = 'Select Rock, Paper or Scissor to Play!'
+    playButtons.style.display = "block";
 }
 
 /* One round of the game is played, computer vs player */
 function playRound(playerSelection, computerSelection) {
-    playerChoice.textContent = "Player Choice: " + playerSelection;
-    computerChoice.textContent = "Computer Choice: " + computerSelection; 
+    playerChoice.textContent = playerSelection;
+    computerChoice.textContent = computerSelection;
 
     if (playerSelection === computerSelection) {
         roundResult.textContent = 'Tie!';
@@ -82,12 +97,10 @@ function playRound(playerSelection, computerSelection) {
  If tie or wrong choice by user -> repeat round */
 function game() {
     if (playerScore === 5) {
-        alert('Final Score - Player: ' + playerScore + ' Computer Score: ' + computerScore);
-        alert("You win the game! Press Ok to start a New Game");
-        newGame();
+        playButtons.style.display = "none";
+        roundResult.textContent = "Player wins the game! Press New Game Button to start a New Game"
     } else if (computerScore === 5) {
-        alert('Final Score - Player: ' + playerScore + ' Computer Score: ' + computerScore);
-        alert("Computer wins the game! Press Ok to start a New Game");
-        newGame();
+        playButtons.style.display = "none";
+        roundResult.textContent = "Computer wins the game! Press New Game Button to start a New Game";
     }
 }
