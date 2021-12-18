@@ -1,9 +1,31 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 24px;
-    justify-content: space-between;
+    background-color: #191919;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+    color: #C84B31;
+    margin-top: 50px;
+}
+
+.gameBoard {
+    background-color: #ECDBBA;
+    margin: 50px;
+    padding: 25px 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
 }
 
 .scoreBoard {
@@ -43,4 +65,23 @@ body {
 
 .roundResult {
     text-align: center;
+}
+
+footer {
+    display: flex;
+    margin: auto 0px 15px 0px;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #ECDBBA;
+}
+
+footer p {
+    padding: 0px 5px;
+}
+
+.githubIcon {
+    width: 25px;
+    height: 25px;
 }

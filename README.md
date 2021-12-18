@@ -1,6 +1,8 @@
 # Rock Paper Scissor
 This is a game of Rock Paper Scisor made for [The Odin Project](https://www.theodinproject.com/).
 
+[Live Preview](https://rmg92.github.io/odin_project_rockpaperscissors/)
+
 ## Project Reflections
 The project was divided on 2 parts. The [first part](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors) consisted on creating a game that could be played on the console, were the player played a 5 round game against the computer.
 

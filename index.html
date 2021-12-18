@@ -9,45 +9,55 @@
 </head>
 
 <body>
-    <div class="scoreBoard">
-        <!--Displays the Score for both the player and Computer as the game is played-->
-        <div class="score">
-            <p>Player</p>
-            <p id="playerScoreDisplay">0</p>
-        </div>
-        <div class="score">
-            <p>Computer</p>
-            <p id="computerScoreDisplay">0</p>
-        </div>
-    </div>
-
-    <div class="roundBoard">
-        <!--Displays the players selections for the round and the round result-->
-        <div class="selections">
-            <div class="choice">
-                <p>Player Choice</p>
-                <p id="playerSelection"></p>
+    <h1>A game of Rock, Paper and Scissor!
+    </h1>
+    <div class="gameBoard">
+        <div class="scoreBoard">
+            <!--Displays the Score for both the player and Computer as the game is played-->
+            <div class="score">
+                <p>Player</p>
+                <p id="playerScoreDisplay">0</p>
             </div>
-            <div class="choice">
-                <p>Computer Choice</p>
-                <p id="computerSelection"></p>
+            <div class="score">
+                <p>Computer</p>
+                <p id="computerScoreDisplay">0</p>
             </div>
         </div>
-        <div class="roundResult">
-            <p id="roundResult">Select Rock, Paper or Scissor to Play!</p>
+
+        <div class="roundBoard">
+            <!--Displays the players selections for the round and the round result-->
+            <div class="selections">
+                <div class="choice">
+                    <p>Player Choice</p>
+                    <p id="playerSelection"></p>
+                </div>
+                <div class="choice">
+                    <p>Computer Choice</p>
+                    <p id="computerSelection"></p>
+                </div>
+            </div>
+            <div class="roundResult">
+                <p id="roundResult">Select Rock, Paper or Scissor to Play!</p>
+            </div>
+        </div>
+
+        <div class="playButtons">
+            <button class="rock">Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissor">Scissor</button>
+        </div>
+        <div>
+            <button class="newGame">New Game</button>
         </div>
     </div>
-
-    <div class="playButtons">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissor">Scissor</button>
-    </div>
-    <div>
-        <button class="newGame">New Game</button>
-    </div>
-
-
+    <footer>
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script>
+        </p>
+        <p>Rmg92</p>
+        <a href="https://github.com/Rmg92" target="_blank"><img class="githubIcon" src="./images/GitHub-Mark-Light-120px-plus.png"
+                alt="Github icon"></a>
+    </footer>
 </body>
 
 </html>
