@@ -28,39 +28,27 @@ h1 {
     max-width: 500px;
 }
 
-.scoreBoard {
+.scoreInfo {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 400px;
     width: 400px;
     align-items: center;
 }
 
-.score {
+.info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.roundBoard {
+.roundInfo{
     display: flex;
     flex-direction: column;
     max-width: 400px;
     width: 400px;
     align-content: center;
-}
-
-.selections {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 150px;
-}
-
-.choice {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .roundResult {
@@ -75,8 +63,12 @@ footer {
     justify-content: center;
     align-items: center;
     color: #ECDBBA;
+    font-size: large;
 }
 
+footer a {
+    color: inherit;
+}
 footer p {
     padding: 0px 5px;
 }

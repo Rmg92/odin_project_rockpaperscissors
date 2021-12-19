@@ -9,38 +9,29 @@
 </head>
 
 <body>
-    <h1>A game of Rock, Paper and Scissor!
-    </h1>
+    <h1>A game of Rock, Paper and Scissor!</h1>
     <div class="gameBoard">
-        <div class="scoreBoard">
+        <div class="scoreInfo">
             <!--Displays the Score for both the player and Computer as the game is played-->
-            <div class="score">
-                <p>Player</p>
+            <div class="info">
+                <h2>Player</h2>
                 <p id="playerScoreDisplay">0</p>
+                <h2>Player Choice</h2>
+                <p id="playerSelection"></p>
             </div>
-            <div class="score">
-                <p>Computer</p>
+            <div class="info">
+                <h2>Computer</h2>
                 <p id="computerScoreDisplay">0</p>
+                <h2>Computer Choice</h2>
+                <p id="computerSelection"></p>
             </div>
         </div>
-
-        <div class="roundBoard">
+        <div class="roundInfo">
             <!--Displays the players selections for the round and the round result-->
-            <div class="selections">
-                <div class="choice">
-                    <p>Player Choice</p>
-                    <p id="playerSelection"></p>
-                </div>
-                <div class="choice">
-                    <p>Computer Choice</p>
-                    <p id="computerSelection"></p>
-                </div>
-            </div>
             <div class="roundResult">
-                <p id="roundResult">Select Rock, Paper or Scissor to Play!</p>
+                <p id="roundResult">Select your weapon to start the game!</p>
             </div>
         </div>
-
         <div class="playButtons">
             <button class="rock">Rock</button>
             <button class="paper">Paper</button>
@@ -51,12 +42,11 @@
         </div>
     </div>
     <footer>
-        <p>Copyright ©
-            <script>document.write(new Date().getFullYear())</script>
-        </p>
-        <p>Rmg92</p>
-        <a href="https://github.com/Rmg92" target="_blank"><img class="githubIcon" src="./images/GitHub-Mark-Light-120px-plus.png"
-                alt="Github icon"></a>
+        <p>Made by Rmg92</p>
+        <a href="https://github.com/Rmg92" target="_blank"><img class="githubIcon"
+                src="./images/GitHub-Mark-Light-120px-plus.png" alt="Github icon"></a>
+        <p>for</p>
+        <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
     </footer>
 </body>
 

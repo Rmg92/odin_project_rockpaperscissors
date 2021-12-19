@@ -22,17 +22,13 @@ buttons.forEach((button) => {
 
 /* Computer makes a random choice between Rock, Paper and Scissor */
 function computerPlay() {
-    /* a random number between 1 and 100 is chosen*/
     let computerSelection = Math.random();
 
     if (computerSelection < 1 / 3) {
-        /* if number is lower than 0.333.., computer choses Rock*/
         return "rock";
     } else if (computerSelection > 2 / 3) {
-        /* if number is higher than 0.666.., computer choses Paper*/
         return "paper"
     } else {
-        /* if number is between 0.333.. and 0.666.., computer choses Scissor*/
         return "scissor"
     }
 }
@@ -72,19 +68,19 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
         roundResult.textContent = 'Tie!';
-    } else if (playerSelection == "rock") { //if player choses rock it compares it to the computer choice and sets the winner
+    } else if (playerSelection == "rock") { 
         if (computerSelection == "paper") {
             computerWin(playerSelection, computerSelection);
         } else {
             playerWin(playerSelection, computerSelection);
         }
-    } else if (playerSelection == "paper") { //if player choses paper it compares it to the computer choice and sets the winner
+    } else if (playerSelection == "paper") { 
         if (computerSelection == "scissor") {
             computerWin(playerSelection, computerSelection);
         } else {
             playerWin(playerSelection, computerSelection);
         }
-    } else if (playerSelection == "scissor") { //if player choses scissor it compares it to the computer choice and sets the winner
+    } else if (playerSelection == "scissor") {
         if (computerSelection == "rock") {
             computerWin(playerSelection, computerSelection);
         } else {
