@@ -6,10 +6,9 @@ const computerChoice = document.querySelector('#computerSelection');
 const computerScoreDisplay = document.querySelector('#computerScoreDisplay');
 const playerScoreDisplay = document.querySelector('#playerScoreDisplay');
 const roundResult = document.querySelector('#roundResult');
-const playButtons = document.querySelector('.playButtons');
 
 /* If New game button is clicked, function new game is run, if rock, paper or scissor buttons are clicked, playRound function is run */
-const buttons = document.querySelectorAll('button');
+const buttons = document.getElementById('playButtons').querySelectorAll("img");
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (button.className == 'newGame') {
