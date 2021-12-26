@@ -78,8 +78,27 @@ footer p {
     height: 25px;
 }
 
+#playButtons {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #playButtons img {
     width: 100px;
     height: 100px;
+    transition-duration: 250ms;
 }
 
+#playButtons img:hover {
+    width: 110px;
+    height: 110px;
+    transition-duration: 250ms;
+}
+
+#playButtons img:active{
+    width: 90px;
+    height: 90px;
+    transition-duration: 250ms;
+}

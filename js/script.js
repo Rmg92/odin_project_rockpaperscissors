@@ -6,16 +6,17 @@ const computerChoice = document.querySelector('#computerSelection');
 const computerScoreDisplay = document.querySelector('#computerScoreDisplay');
 const playerScoreDisplay = document.querySelector('#playerScoreDisplay');
 const roundResult = document.querySelector('#roundResult');
+const playButtons = document.querySelector('#playButtons');
+
+const newGameButton = document.querySelector('.newGame').addEventListener('click', () => {
+    newGame();
+});
 
 /* If New game button is clicked, function new game is run, if rock, paper or scissor buttons are clicked, playRound function is run */
 const buttons = document.getElementById('playButtons').querySelectorAll("img");
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        if (button.className == 'newGame') {
-            newGame();
-        } else {
-            playRound(button.className, computerPlay());
-        }
+        playRound(button.className, computerPlay());
     })
 })
 
@@ -57,7 +58,7 @@ function newGame() {
     computerChoice.textContent = '';
     playerChoice.textContent = '';
     roundResult.textContent = 'Select Rock, Paper or Scissor to Play!'
-    playButtons.style.display = "block";
+    playButtons.style.display = "flex";
 }
 
 /* One round of the game is played, computer vs player */
@@ -67,13 +68,13 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
         roundResult.textContent = 'Tie!';
-    } else if (playerSelection == "rock") { 
+    } else if (playerSelection == "rock") {
         if (computerSelection == "paper") {
             computerWin(playerSelection, computerSelection);
         } else {
             playerWin(playerSelection, computerSelection);
         }
-    } else if (playerSelection == "paper") { 
+    } else if (playerSelection == "paper") {
         if (computerSelection == "scissor") {
             computerWin(playerSelection, computerSelection);
         } else {
