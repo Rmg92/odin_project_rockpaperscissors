@@ -22,11 +22,11 @@ buttons.forEach((button) => {
 
 /* Computer makes a random choice between Rock, Paper and Scissor */
 function computerPlay() {
-    let computerSelection = Math.random();
+    let computerSelection = Math.random() * (3 - 0) + 0;
 
-    if (computerSelection < 1 / 3) {
+    if (computerSelection < 1) {
         return "rock";
-    } else if (computerSelection > 2 / 3) {
+    } else if (computerSelection >= 2) {
         return "paper"
     } else {
         return "scissor"
@@ -55,16 +55,16 @@ function newGame() {
     playerScore = 0;
     computerScoreDisplay.textContent = computerScore;
     playerScoreDisplay.textContent = playerScore;
-    computerChoice.textContent = '';
-    playerChoice.textContent = '';
+    computerChoice.setAttribute("src", "./images/question.svg");
+    playerChoice.setAttribute("src", "./images/question.svg");
     roundResult.textContent = 'Select Rock, Paper or Scissor to Play!'
     playButtons.style.display = "flex";
 }
 
 /* One round of the game is played, computer vs player */
 function playRound(playerSelection, computerSelection) {
-    playerChoice.textContent = playerSelection;
-    computerChoice.textContent = computerSelection;
+    playerChoice.setAttribute("src", `./images/${playerSelection}.svg`);
+    computerChoice.setAttribute("src", `./images/${computerSelection}.svg`);
 
     if (playerSelection === computerSelection) {
         roundResult.textContent = 'Tie!';
