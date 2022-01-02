@@ -22,11 +22,11 @@ buttons.forEach((button) => {
 
 /* Computer makes a random choice between Rock, Paper and Scissor */
 function computerPlay() {
-    let computerSelection = Math.random() * (3 - 0) + 0;
+    let computerSelection = Math.floor(Math.random() * 3);
 
-    if (computerSelection < 1) {
+    if (computerSelection == 0) {
         return "rock";
-    } else if (computerSelection >= 2) {
+    } else if (computerSelection == 1) {
         return "paper"
     } else {
         return "scissor"
