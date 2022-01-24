@@ -1,7 +1,17 @@
 # Rock Paper Scissor
-This is a game of Rock Paper Scisor made for [The Odin Project](https://www.theodinproject.com/).
+This project is part of [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors) foundations curriculum.
 
 [Live Preview](https://rmg92.github.io/odin_project_rockpaperscissors/)
+
+## Description
+This implementation of the Rock Paper Scissor game is played against the computer on the web browser.
+
+## Rules
+Both the player and the computer play until one of them reaches 5 wins.
+The game follows the [Rock Paper Scissor](https://en.wikipedia.org/wiki/Rock_paper_scissors) rules were:
+* Rock beats Scissor
+* Paper beats Rock
+* Scissor beats Paper
 
 ## Project Reflections
 The project was divided on 2 parts. The [first part](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors) consisted on creating a game that could be played on the console, were the player played a 5 round game against the computer.
