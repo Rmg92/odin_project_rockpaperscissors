@@ -1,29 +1,41 @@
+
 # Rock Paper Scissor
+
 This project is part of [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors) foundations curriculum.
 
-[Live Preview](https://rmg92.github.io/odin_project_rockpaperscissors/)
+![Game Image](images/game_screenshot.png)
 
 ## Description
+
 This implementation of the Rock Paper Scissor game is played against the computer on the web browser.
 
 ## Rules
+
 Both the player and the computer play until one of them reaches 5 wins.
 The game follows the [Rock Paper Scissor](https://en.wikipedia.org/wiki/Rock_paper_scissors) rules were:
 * Rock beats Scissor
 * Paper beats Rock
 * Scissor beats Paper
 
-## Project Reflections
-The project was divided on 2 parts. The [first part](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors) consisted on creating a game that could be played on the console, were the player played a 5 round game against the computer.
+## Built with
 
-This allowed me to put to pratice what I had previously learned on javascript.
+* HTML
+* CSS
+* Javascript
 
-For the [second part](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/revisiting-rock-paper-scissors) I had to make the game playable with a simple UI.
+## Play
 
-This was a bit more complicated than the first part because I had to adapt the my old javascript code to work with the UI and I had some difficulty updating the UI on the last round, but after googling a bit and thinking a lot I managed to find the problem and correct it.
-It was also a good lesson on how the git branches work.
+[Github Pages](https://rmg92.github.io/odin_project_rockpaperscissors/)
 
-## Future
-I plan to keep updating this project as I keep learning and until I feel happy with it.
+## What I Learned
 
-Currently I'm working on improving the design of the page by adding some colors, animations and images, but I also plan to revisit the javascript code in the future.
+*  How to interact with the code via the browser console
+*  How to understand errors
+*  How to use Javascript Functions
+*  How to manipulate the html/css elements with javascript
+*  How to work with Git branches
+
+## Acknowledgments
+
+* [The Odin Project](https://www.theodinproject.com/)
+* [Github](https://github.com/)
